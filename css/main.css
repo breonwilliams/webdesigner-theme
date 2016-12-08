@@ -236,7 +236,7 @@ h6 {
 }
 
 .hdr-rounded {
-	background: rgb(235, 34, 39);
+	background: #29d9c2;
 	color: ##fff;
 	display: inline-block;
 	padding: 10px 0 0;
@@ -274,7 +274,7 @@ h6 {
 	display: block;
 	height: 1px;
 	width: 35px;
-	border-top: 2px solid #eb221d;
+	border-top: 2px solid #29d9c2;
 	margin: 6px 0 10px;
 }
 
@@ -351,7 +351,7 @@ Blockquote
 blockquote {
 	border: none;
 	background: #f9fafb;
-	border-left: 60px solid #eb221d;
+	border-left: 60px solid #29d9c2;
 	padding: 20px;
 	position: relative;
 	margin-top: 20px;
@@ -459,7 +459,7 @@ Thumbnail
 }
 
 .thumbnail h3 a:hover {
-	color: rgb(235,34,39);
+	color: #29d9c2;
 }
 
 .view {
@@ -626,7 +626,7 @@ Header
 	margin-left: 20px;
 	color: #d5d5d5;
 }
-.top-menu ul li a:hover{color: #eb221d;}
+.top-menu ul li a:hover{color: #29d9c2;}
 
 /*
 Navigation
@@ -723,14 +723,14 @@ nav.affix {
 .dropdown-menu>.active>a,
 .dropdown-menu>.active>a:focus,
 .dropdown-menu>.active>a:hover {
-	background:rgb(235,34,39);
+	background:#29d9c2;
 	border: none;
 }
 
 .navbar-nav .dropdown-menu > .open > a,
 .navbar-nav .dropdown-menu > .open > a:hover,
 .navbar-nav .dropdown-menu > .open > a:focus {
-	background:rgb(235,34,39);
+	background:#29d9c2;
 	border: none;
 }
 
@@ -774,7 +774,7 @@ nav.affix {
 .navbar-nav > .active > a:hover,
 .navbar-nav > .active > a:focus {
 	border: none;
-	background: rgb(235,34,39);
+	background: #29d9c2;
 	cursor: pointer;
 }
 
@@ -829,7 +829,7 @@ nav.affix {
 
 .navbar-nav .dropdown-menu li > a:hover {
 	border:none;
-	background-color: rgb(235,34,39);
+	background-color: #29d9c2;
 }
 
 
@@ -1077,7 +1077,7 @@ Megamenu
 .navbar-nav .yamm-link li a:focus{
 	text-decoration:none;
 	border:none;
-	color: rgb(235,34,39);
+	color: #29d9c2;
 }
 @media (max-width: 969px) {
 	.yamm .dropdown.yamm-fullwidth .dropdown-menu {
@@ -1176,8 +1176,8 @@ Button
 .btn-primary.active:focus,
 .btn-primary.active:hover,
 .btn-primary.active:hover {
-	background-color: #bc1d2a;
-	border-color: #bc1d2a;
+	background-color: #29d9c2;
+	border-color: #29d9c2;
 }
 
 .btn-green {
@@ -1230,7 +1230,7 @@ Button
 
 .btn-link {
 	font-weight: 400;
-	color: rgb(235,34,39);
+	color: #29d9c2;
 	border-radius: 0;
 	box-shadow: none;
 }
@@ -1244,8 +1244,8 @@ Button
 .btn-red,
 .navbar-collapse form[role="search"] button[type="reset"] {
 	color: #fff;
-	background: rgb(235,34,39);
-	border-color: rgb(235,34,39);
+	background: #29d9c2;
+	border-color: #29d9c2;
 }
 
 .navbar-collapse form[role="search"] button[type="submit"] {
@@ -1363,7 +1363,7 @@ ul.tags li a:hover,
 .about-caption span,
 .pagination>li>span,
 .pagination>li.active>span{
-	color:rgb(235,34,39);
+	color:#29d9c2;
 }
 
 /*
@@ -1428,7 +1428,7 @@ div.pp_default .pp_contract:hover,
 .demo-panel h6,
 a.openpanel,
 .heading .linner{
-	background:rgb(235,34,39);
+	background:#29d9c2;
 }
 
 /*
@@ -1485,11 +1485,11 @@ a:hover .media-object,
 .pagination>li.active>span,
 .pagination>li>span:hover,
 .pagination>li.active>span:hover{
-	border-color:rgb(235,34,39);
+	border-color:#29d9c2;
 }
 
 .pricing-wrapper{
-	border-top-color:rgb(235,34,39);
+	border-top-color:#29d9c2;
 }
 
 /*
@@ -1500,7 +1500,7 @@ Hover background color
 .btn-primary:hover,
 .btn-group.open .btn-primary:focus,
 .zoom a:hover {
-	background:#eb5858;
+	background:#002929;
 }
 
 .btn-primary.active.focus,
@@ -1513,8 +1513,8 @@ Hover background color
 .open>.dropdown-toggle.btn-primary:focus,
 .open>.dropdown-toggle.btn-primary:hover {
 	color: #fff;
-	background-color: #eb5858;
-	border-color: #eb5858;
+	background-color: #002929;
+	border-color: #002929;
 }
 
 /*
@@ -1523,7 +1523,7 @@ Hover border color
 .btn-primary:focus,
 .btn-primary.focus,
 .btn-primary:hover {
-	border-color:#eb5858;
+	border-color:#002929;
 }
 
 /* Tabs */
@@ -1563,7 +1563,7 @@ Hover border color
 
 .nav-tabs > li > a:hover,
 .nav-tabs > li > a:focus {
-	color: rgb(235,34,39);
+	color: #29d9c2;
 	background-color: transparent;
 	border: none;
 	border-top:2px solid #3b3b3b;
@@ -1606,7 +1606,7 @@ Hover border color
 
 	.nav-tabs > li > a:hover,
 	.nav-tabs > li > a:focus {
-		color: rgb(235,34,39);
+		color: #29d9c2;
 		background-color: transparent;
 		border-left:2px solid #3b3b3b;
 		border-top:none;
@@ -1627,13 +1627,13 @@ ul.post_tag li {
 	margin: 0 10px 0 0;
 }
 ul.post_tag li a {
-	border: 2px solid rgb(235, 34, 39);
+	border: 2px solid #29d9c2;
 	font-family:'Montserrat' !important;
 	padding: 4px 8px;
 	font-size: 10px;
 }
 ul.post_tag li a {
-	color: #eb5858;
+	color: #002929;
 	text-decoration: none;
 	cursor: pointer;
 	-webkit-transition: color 0.15s ease-in-out 0s;
@@ -1643,7 +1643,7 @@ ul.post_tag li a {
 }
 
 ul.post_tag li a:hover {
-	color: rgb(235,34,39);
+	color: #29d9c2;
 }
 
 /*
@@ -1667,10 +1667,10 @@ Tables
 	border-bottom:none;
 }
 .table-1.table-main-color {
-	border-bottom:1px solid rgb(235,34,39);
+	border-bottom:1px solid #29d9c2;
 }
 .table-1.table-main-color th {
-	background-color: rgb(235,34,39);
+	background-color: #29d9c2;
 	color:#fff;
 }
 
@@ -1679,7 +1679,7 @@ Tables
 }
 
 .table .btn-link:hover {
-	color: rgb(235,34,39);
+	color: #29d9c2;
 }
 
 /*
@@ -2005,7 +2005,7 @@ Form
 }
 
 .modal-header {
-	background: rgb(235,34,39);
+	background: #29d9c2;
 }
 
 /*
@@ -2034,7 +2034,7 @@ Alerts
 }
 .alert.alert-dismissable .close:hover,
 .alert.alert-dismissable .close:focus {
-	color: rgb(235,34,39);
+	color: #29d9c2;
 	opacity: 1;
 }
 .alert-modal {
@@ -2329,7 +2329,7 @@ img.rounded, .rounded {
 .social-icon a:hover,
 .social-icon a:focus,
 .social-icon a:active {
-	color: rgb(235, 34, 39);
+	color: #29d9c2;
 }
 
 @media (max-width:767px) {
@@ -2411,7 +2411,7 @@ h4.media-heading {
 	color:#3b3b3b;
 }
 .media-heading > .user:hover, .media-heading > .user:focus, .media-heading > .user:active {
-	color:rgb(235, 34, 39);
+	color:#29d9c2;
 }
 .media > .pull-left {
 	margin-right:15px;
@@ -2478,7 +2478,7 @@ Upcoming Events
 	border-bottom: solid 1px #222;
 }
 .event-date {
-	background: rgb(235, 34, 39);
+	background: #29d9c2;
 	color: #fff;
 	margin-top: 6px;
 	padding: 0 5px;
@@ -2555,7 +2555,7 @@ img {
 	color: #191919;
 }
 .client-single h3 a:hover {
-	color: rgb(235, 34, 39);
+	color: #29d9c2;
 }
 .client-avi {
 	float: left;
@@ -2627,7 +2627,7 @@ Seminar Dates
 	line-height: 30px;
 	text-transform: uppercase;
 	color: #fff;
-	background-color: rgb(235, 34, 39);
+	background-color: #29d9c2;
 }
 .date-list time .date {
 	display: block;
@@ -2812,7 +2812,7 @@ Star Rating
 
 .rating > input:checked ~ label, /* show gold star when clicked */
 .rating:not(:checked) > label:hover, /* hover current star */
-.rating:not(:checked) > label:hover ~ label { color: rgb(235, 34, 39);  } /* hover previous stars in list */
+.rating:not(:checked) > label:hover ~ label { color: #29d9c2;  } /* hover previous stars in list */
 
 .rating > input:checked + label:hover, /* hover current star when changing rating */
 .rating > input:checked ~ label:hover,
@@ -2842,7 +2842,7 @@ Member Activity Comments
 	width: 100%;
 	padding: 10px;
 	vertical-align: top;
-	border: solid 1px rgb(235, 34, 39);
+	border: solid 1px #29d9c2;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
@@ -2923,7 +2923,7 @@ Pagination
 .pagination > .active > a,
 .pagination>li>span,
 .pagination>li.active>span {
-	color: rgb(235, 34, 39);
+	color: #29d9c2;
 	background-color: transparent;
 	border-radius: 0;
 }
@@ -2942,7 +2942,7 @@ Pagination
 .pagination .active a:hover,
 .pagination>li>span:hover,
 .pagination>li.active>span:hover{
-	color: rgb(235, 34, 39);
+	color: #29d9c2;
 	background-color: transparent;
 }
 .pagination > .disabled a {
@@ -2963,7 +2963,7 @@ Full Width Sections
 }
 
 .section-red {
-	background-color: rgb(235,34,39);
+	background-color: #29d9c2;
 	color: #fff;
 }
 
@@ -3057,7 +3057,7 @@ Plan Section
 	box-shadow: 0 6px 12px rgba(0,0,0,.015);
 }
 .plan:hover .plan-title {
-	color: rgb(235, 34, 39);
+	color: #29d9c2;
 	-webkit-transition: all 0.3s ease-out; transition: all 0.3s ease-out;
 }
 .plan-featured-overlay {
@@ -3068,7 +3068,7 @@ Plan Section
 	height: 0;
 	border-style: solid;
 	border-width: 0 50px 50px 0;
-	border-color: transparent rgb(235, 34, 39) transparent transparent;
+	border-color: transparent #29d9c2 transparent transparent;
 }
 .plan-featured {
 	position: absolute;
@@ -3080,7 +3080,7 @@ Plan Section
 .plan-price {
 	font-family: "Montserrat", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 40px;
-	color: rgb(235, 34, 39);
+	color: #29d9c2;
 	margin-bottom: 20px;
 }
 
@@ -3192,8 +3192,8 @@ Progress Bars
 	background: #3766c7;
 }
 
-.progress-bar-red {
-	background: #EB221D;
+.progress-bar-aqua {
+	background: #29d9c2;
 }
 
 .progress-bar-yellow {
@@ -3379,7 +3379,7 @@ Footer
 
 .footer-social a:hover i.fa,
 .header-social a:hover i.fa {
-	background: rgb(235,34,39);
+	background: #29d9c2;
 	color: #fff;
 	font-weight: 400;
 	-webkit-transition: all 0.3s;
@@ -3494,7 +3494,7 @@ Footer
 
 .tweet-date {
 	font-size: 11px;
-	color: rgb(235,34,39);
+	color: #29d9c2;
 }
 
 .tweet {
