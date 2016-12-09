@@ -15,14 +15,14 @@ if (post_password_required()) {
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if (have_comments()) { ?>
-		<h2 class="comments-title">
+		<h2 class="comments-title title-medium br-bottom mb40">
 			<?php
 			printf(_nx('One comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'bootstrap-basic'), number_format_i18n(get_comments_number()), '<span>' . get_the_title() . '</span>');
 			?>
 		</h2>
 
 		<?php if (get_comment_pages_count() > 1 && get_option('page_comments')) { // are there comments to navigate through  ?>
-			<h3 class="screen-reader-text sr-only"><?php _e('Comment navigation', 'bootstrap-basic'); ?></h3>
+			<h3 class="screen-reader-text sr-only title-medium br-bottom mb40"><?php _e('Comment navigation', 'bootstrap-basic'); ?></h3>
 			<ul id="comment-nav-above" class="comment-navigation pager" role="navigation">
 				<li class="nav-previous previous"><?php previous_comments_link(__('&larr; Older Comments', 'bootstrap-basic')); ?></li>
 				<li class="nav-next next"><?php next_comments_link(__('Newer Comments &rarr;', 'bootstrap-basic')); ?></li>
@@ -42,7 +42,7 @@ if (post_password_required()) {
 		</ul><!-- .comment-list -->
 
 		<?php if (get_comment_pages_count() > 1 && get_option('page_comments')) { // are there comments to navigate through  ?>
-			<h3 class="screen-reader-text sr-only"><?php _e('Comment navigation', 'bootstrap-basic'); ?></h3>
+			<h3 class="screen-reader-text sr-only title-medium br-bottom mb40"><?php _e('Comment navigation', 'bootstrap-basic'); ?></h3>
 			<ul id="comment-nav-below" class="comment-navigation comment-navigation-below pager" role="navigation">
 				<li class="nav-previous previous"><?php previous_comments_link(__('&larr; Older Comments', 'bootstrap-basic')); ?></li>
 				<li class="nav-next next"><?php next_comments_link(__('Newer Comments &rarr;', 'bootstrap-basic')); ?></li>
@@ -55,8 +55,8 @@ if (post_password_required()) {
 	// If comments are closed and there are comments, let's leave a little note, shall we?
 	if (!comments_open() && '0' != get_comments_number() && post_type_supports(get_post_type(), 'comments')) { ?>
 		<p class="no-comments"><?php _e('Comments are closed.', 'bootstrap-basic'); ?></p>
-	<?php
-	} //endif;
+		<?php
+	} //endif; 
 	?>
 
 	<?php
@@ -90,36 +90,35 @@ if (post_password_required()) {
 	ob_start();
 	comment_form(
 		array(
-			'class_submit' => 'btn btn-primary btn-md pad-20',
+			'class_submit' => 'btn btn-primary',
 			'fields' => array(
-				'author' => '<div class="form-group">' .
-							'<label class="control-label col-md-2" for="author">' . __('Name', 'bootstrap-basic') . ($req ? ' <span class="required">*</span>' : '') . '</label> ' .
-							'<div class="col-md-10">' .
-							'<input id="author" name="author" type="text" value="' . esc_attr($commenter['comment_author']) . '" size="30"' . $aria_req . ' class="form-control" />' .
-							'</div>' .
-							'</div>',
-				'email'  => '<div class="form-group">' .
-							'<label class="control-label col-md-2" for="email">' . __('Email', 'bootstrap-basic') . ($req ? ' <span class="required">*</span>' : '') . '</label> ' .
-							'<div class="col-md-10">' .
-							'<input id="email" name="email" ' . ($html5 ? 'type="email"' : 'type="text"') . ' value="' . esc_attr($commenter['comment_author_email']) . '" size="30"' . $aria_req . ' class="form-control" />' .
-							'</div>' .
-							'</div>',
-				'url'    => '<div class="form-group">' .
-							'<label class="control-label col-md-2" for="url">' . __('Website', 'bootstrap-basic') . '</label> ' .
-							'<div class="col-md-10">' .
-							'<input id="url" name="url" ' . ($html5 ? 'type="url"' : 'type="text"') . ' value="' . esc_attr($commenter['comment_author_url']) . '" size="30" class="form-control" />' .
-							'</div>' .
-							'</div>',
+				'author' =>
+					'<div class="row">' .
+					'<div class="col-sm-4">' .
+					'<div class="form-group">' .
+					'<input id="author" placeholder=" Name" name="author" type="text" value="' . esc_attr($commenter['comment_author']) . '" size="30"' . $aria_req . ' class="form-control" />' .
+					'</div>' .
+					'</div>' ,
+				'email'  => '<div class="col-sm-4">' .
+					'<div class="form-group">' .
+					'<input id="email" placeholder="Email" name="email" ' . ($html5 ? 'type="email"' : 'type="text"') . ' value="' . esc_attr($commenter['comment_author_email']) . '" size="30"' . $aria_req . ' class="form-control" />' .
+					'</div>' .
+					'</div>' ,
+				'url'    => '<div class="col-sm-4">' .
+					'<div class="form-group">' .
+					'<input id="url" name="url" placeholder="Website" ' . ($html5 ? 'type="url"' : 'type="text"') . ' value="' . esc_attr($commenter['comment_author_url']) . '" size="30" class="form-control" />' .
+					'</div>' .
+					'</div>' .
+					'</div>' ,
 			),
-			'comment_field' => '<div class="form-group">' .
-							'<label class="control-label col-md-2" for="comment">' . _x('Comment', 'noun') . '</label> ' .
-							'<div class="col-md-10">' .
-							'<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" class="form-control"></textarea>' .
-							'</div>' .
-							'</div>',
-			'comment_notes_after' => '<p class="help-block">' .
-							sprintf(__('You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s', 'bootstrap-basic'), $comment_allowed_tags) .
-							'</p>'
+			'comment_field' =>
+				'<div class="form-group">' .
+				'<textarea id="comment" placeholder=" Message" name="comment" cols="45" rows="8" aria-required="true" class="form-control"></textarea>' .
+				'</div>',
+			'comment_notes_after' =>
+				'<p class="help-block">' .
+				sprintf(__('You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s', 'bootstrap-basic'), $comment_allowed_tags) .
+				'</p>' ,
 		)
 	);
 
