@@ -26,12 +26,50 @@
 		<!--[if lt IE 8]>
 			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
-		
-		
-		
-		
-		
 			<?php do_action('before'); ?>
+
+		<!-- Push nav start -->
+		<a href="#cd-nav" class="cd-nav-trigger">Menu
+			<span class="cd-nav-icon"></span>
+
+			<svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
+				<circle fill="transparent" stroke="#656e79" stroke-width="1" cx="27" cy="27" r="25" stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
+			</svg>
+		</a>
+
+		<div id="cd-nav" class="cd-nav">
+			<div class="cd-navigation-wrapper">
+				<div class="cd-half-block">
+					<h2>Navigation</h2>
+
+					<nav>
+						<ul class="cd-primary-nav">
+							<li><a href="#0" class="selected">The team</a></li>
+							<li><a href="#0">Our services</a></li>
+							<li><a href="#0">Our projects</a></li>
+							<li><a href="#0">Start a project</a></li>
+							<li><a href="#0">Contact us</a></li>
+						</ul>
+					</nav>
+				</div><!-- .cd-half-block -->
+
+				<div class="cd-half-block">
+					<address>
+						<ul class="cd-contact-info">
+							<li><a href="mailto:info@myemail.co">info@myemail.co</a></li>
+							<li>0244-12345678</li>
+							<li>
+								<span>MyStreetName 24</span>
+								<span>W1234X</span>
+								<span>London, UK</span>
+							</li>
+						</ul>
+					</address>
+				</div> <!-- .cd-half-block -->
+			</div> <!-- .cd-navigation-wrapper -->
+		</div> <!-- .cd-nav -->
+		<div class="pushNav-content">
+		<!-- Push nav end -->
 			<header role="banner">
 				<div class="header-main">
 					<div class="container">
