@@ -39,7 +39,7 @@ a {
   z-index: 2;
   /* fix bug on iOS */
   height: 100vh;
-  overflow-y: auto;
+  /*overflow-y: auto;*/
   background: #FFFFFF;
   -webkit-overflow-scrolling: touch;
   /* Force Hardware Acceleration in WebKit */
@@ -70,7 +70,7 @@ a {
   position: fixed;
   z-index: 3;
   right: 5%;
-  top: 20px;
+  bottom: 20px;
   height: 54px;
   width: 54px;
   background-color: #243040;
@@ -82,6 +82,7 @@ a {
   -webkit-transition: -webkit-transform 0.5s;
   -moz-transition: -moz-transform 0.5s;
   transition: transform 0.5s;
+  box-shadow: 0 2px 6px rgba(0,0,0,.2);
 }
 .cd-nav-trigger .cd-nav-icon {
   /* icon created in CSS */
@@ -202,7 +203,7 @@ a {
 }
 @media only screen and (min-width: 1170px) {
   .cd-nav-trigger {
-    top: 40px;
+    bottom: 40px;
   }
 }
 
@@ -301,7 +302,7 @@ a {
   color: #ffffff;
 }
 .cd-nav .cd-contact-info {
-  margin-top: 80px;
+  /*margin-top: 80px;*/
 }
 .cd-nav .cd-contact-info li {
   font-family: "Merriweather", serif;
@@ -309,7 +310,7 @@ a {
   line-height: 1.2;
   color: rgba(255, 255, 255, 0.3);
 }
-.cd-nav .cd-contact-info a {
+.cd-nav .cd-contact-info a, .cd-nav .cd-contact-info {
   color: #ffffff;
 }
 .cd-nav .cd-contact-info span {
@@ -345,11 +346,10 @@ a {
     font-size: 4.4rem;
   }
   .cd-nav .cd-contact-info {
-    margin-top: 120px;
-    text-align: right;
+    /*text-align: right;*/
   }
   .cd-nav .cd-contact-info li {
-    margin-bottom: 2.4em;
+    margin-bottom: 1.4em;
   }
   .cd-nav .cd-contact-info li, .cd-nav .cd-contact-info a, .cd-nav .cd-contact-info span {
     font-size: 2rem;

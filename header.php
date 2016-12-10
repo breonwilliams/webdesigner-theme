@@ -43,97 +43,52 @@
 					<h2>Navigation</h2>
 
 					<nav>
-						<ul class="cd-primary-nav">
-							<li><a href="#0" class="selected">The team</a></li>
-							<li><a href="#0">Our services</a></li>
-							<li><a href="#0">Our projects</a></li>
-							<li><a href="#0">Start a project</a></li>
-							<li><a href="#0">Contact us</a></li>
-						</ul>
+						<?php wp_nav_menu(array('theme_location' => 'pushMenu', 'container' => false, 'menu_class' => 'cd-primary-nav', 'walker' => new BootstrapBasicMyWalkerNavMenu())); ?>
+
 					</nav>
 				</div><!-- .cd-half-block -->
 
 				<div class="cd-half-block">
-					<address>
-						<ul class="cd-contact-info">
-							<li><a href="mailto:info@myemail.co">info@myemail.co</a></li>
-							<li>0244-12345678</li>
-							<li>
-								<span>MyStreetName 24</span>
-								<span>W1234X</span>
-								<span>London, UK</span>
-							</li>
-						</ul>
-					</address>
+					<?php get_sidebar('pushmenu'); ?>
 				</div> <!-- .cd-half-block -->
 			</div> <!-- .cd-navigation-wrapper -->
 		</div> <!-- .cd-nav -->
 		<div class="pushNav-content">
 		<!-- Push nav end -->
-			<header role="banner">
-				<div class="header-main">
-					<div class="container">
-						<div class="row row-with-vspace site-branding">
-							<div class="col-xs-6 site-title">
-								<?php if ( get_theme_mod( 'm1_logo' ) ) : ?>
-									<div class="logo">
-										<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="site-logo" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			<header class="mycweb-header">
+				<div class="container">
+						<?php if ( get_theme_mod( 'm1_logo' ) ) : ?>
+							<div class="mycweb-logo pull-left">
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="site-logo" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 
-											<img src="<?php echo get_theme_mod( 'm1_logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+									<img src="<?php echo get_theme_mod( 'm1_logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
 
-										</a>
-									</div>
-								<?php else : ?>
-
-									<h1 class="site-title-heading">
-										<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><?php bloginfo('name'); ?></a>
-									</h1>
-
-								<?php endif; ?>
-								<div class="site-description">
-									<small>
-										<?php bloginfo('description'); ?>
-									</small>
-								</div>
+								</a>
 							</div>
-							<div class="col-xs-6 page-header-top-right">
-								<div class="sr-only">
-									<a href="#content" title="<?php esc_attr_e('Skip to content', 'bootstrap-basic'); ?>"><?php _e('Skip to content', 'bootstrap-basic'); ?></a>
-								</div>
-								<?php if (is_active_sidebar('header-right')) { ?>
-									<div class="pull-right">
-										<?php dynamic_sidebar('header-right'); ?>
-									</div>
-									<div class="clearfix"></div>
-								<?php } // endif; ?>
-							</div>
-						</div><!--.site-branding-->
-					</div>
+						<?php else : ?>
+
+							<h1 class="site-title-heading">
+								<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><?php bloginfo('name'); ?></a>
+							</h1>
+
+						<?php endif; ?>
+
+					<nav>
+						<?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'mycweb-main-nav list-inline pull-left', 'walker' => new BootstrapBasicMyWalkerNavMenu())); ?>
+						<!-- cd-main-nav -->
+
+						<?php
+						if ( is_user_logged_in() ) {
+							echo '<ul id="menu-account" class="mycweb-main-nav list-inline pull-right"><li><a class="btn btn-yellow btn-bordered pull-right" href="', wp_logout_url(), '" title="Logout">Logout</a></li></ul>';
+						} else {
+							wp_nav_menu(array('theme_location' => 'accountMenu', 'container' => false, 'menu_class' => 'mycweb-main-nav list-inline pull-right', 'walker' => new BootstrapBasicMyWalkerNavMenu()));
+						}
+						?>
+					</nav>
+					<div class="clearfix"></div>
 				</div>
-				
-				<div class=" main-navigation">
-						<nav class="navbar navbar-custom" role="navigation">
-							<div class="container">
-								<div class="row">
-									<div class="navbar-header">
-										<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-primary-collapse">
-											<span class="sr-only"><?php _e('Toggle navigation', 'bootstrap-basic'); ?></span>
-											<span class="icon-bar"></span>
-											<span class="icon-bar"></span>
-											<span class="icon-bar"></span>
-										</button>
-									</div>
-
-									<div class="collapse navbar-collapse navbar-primary-collapse">
-										<?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav', 'walker' => new BootstrapBasicMyWalkerNavMenu())); ?>
-										<?php dynamic_sidebar('navbar-right'); ?>
-									</div><!--.navbar-collapse-->
-								</div>
-							</div>
-						</nav>
-				</div><!--.main-navigation-->
 			</header>
+
 		<?php full_above_content_area(); ?>
-			
 			<div class="container">
 			<div id="content" class="row row-with-vspace site-content pad-40">

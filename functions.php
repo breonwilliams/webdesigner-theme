@@ -44,6 +44,18 @@ if (!function_exists('bootstrapBasicSetup')) {
 		));
 
 		register_nav_menus(array(
+			'secondary' => __('Secondary Menu', 'bootstrap-basic'),
+		));
+
+		register_nav_menus(array(
+			'pushMenu' => __('Push Menu', 'bootstrap-basic'),
+		));
+
+		register_nav_menus(array(
+			'accountMenu' => __('Account Menu', 'bootstrap-basic'),
+		));
+
+		register_nav_menus(array(
 			'footer' => __('Footer Menu', 'bootstrap-basic'),
 		));
 
@@ -65,6 +77,14 @@ if (!function_exists('bootstrapBasicSetup')) {
 }
 add_action('after_setup_theme', 'bootstrapBasicSetup');
 
+// custom menu class
+
+function add_menuclass($ulclass) {
+	return preg_replace('/<a rel="button"/', '<a rel="button" class="btn btn-yellow btn-bordered"', $ulclass, 1);
+}
+add_filter('wp_nav_menu','add_menuclass');
+
+// custom menu class end
 
 if (!function_exists('bootstrapBasicWidgetsInit')) {
 	/**
@@ -79,15 +99,6 @@ if (!function_exists('bootstrapBasicWidgetsInit')) {
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>',
-		));
-
-		register_sidebar(array(
-			'name'          => __('Navigation bar right', 'bootstrap-basic'),
-			'id'            => 'navbar-right',
-			'before_widget' => '',
-			'after_widget'  => '',
-			'before_title'  => '',
-			'after_title'   => '',
 		));
 
 		register_sidebar(array(
@@ -106,6 +117,15 @@ if (!function_exists('bootstrapBasicWidgetsInit')) {
 			'after_widget'  => '</aside>',
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>',
+		));
+
+		register_sidebar(array(
+			'name'          => __('Push Menu Right', 'bootstrap-basic'),
+			'id'            => 'sidebar-pushmenu',
+			'before_widget' => '<aside id="%1$s" class="widget cd-contact-info %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
 		));
 
 		register_sidebar(array(
