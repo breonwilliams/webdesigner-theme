@@ -55,41 +55,83 @@
 </div> <!-- .cd-nav -->
 <div class="pushNav-content">
 	<!-- Push nav end -->
-	<header class="mycweb-header">
-		<div class="container">
-			<?php if ( get_theme_mod( 'm1_logo' ) ) : ?>
-				<div class="mycweb-logo pull-left">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="site-logo" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 
-						<img src="<?php echo get_theme_mod( 'm1_logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+	<?php
 
-					</a>
-				</div>
-			<?php else : ?>
+	$customhead = get_post_meta( $post->ID, 'meta_box_slider_embed', true );
 
-				<h1 class="site-title-heading">
-					<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><?php bloginfo('name'); ?></a>
-				</h1>
+	if ( $customhead ) {
+		?>
+		<header class="mycweb-header fixedNav">
+			<div class="container">
+				<?php if ( get_theme_mod( 'm1_logo' ) ) : ?>
+					<div class="mycweb-logo pull-left">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="site-logo" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 
-			<?php endif; ?>
+							<img src="<?php echo get_theme_mod( 'm1_logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
 
-			<nav>
-				<?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'mycweb-main-nav list-inline pull-left', 'walker' => new BootstrapBasicMyWalkerNavMenu())); ?>
-				<!-- cd-main-nav -->
+						</a>
+					</div>
+				<?php else : ?>
 
-				<?php
-				if ( is_user_logged_in() ) {
-					echo '<ul id="menu-account" class="mycweb-main-nav list-inline pull-right"><li><a class="btn btn-yellow btn-bordered pull-right btn-sm" href="', wp_logout_url(), '" title="Logout">Logout</a></li></ul>';
-				} else {
-					wp_nav_menu(array('theme_location' => 'accountMenu', 'container' => false, 'menu_class' => 'mycweb-main-nav list-inline pull-right', 'walker' => new BootstrapBasicMyWalkerNavMenu()));
-				}
-				?>
-			</nav>
-			<div class="clearfix"></div>
-		</div>
-	</header>
+					<h1 class="site-title-heading">
+						<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><?php bloginfo('name'); ?></a>
+					</h1>
 
-	<?php full_above_content_area(); ?>
+				<?php endif; ?>
+
+				<nav>
+					<?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'mycweb-main-nav list-inline pull-left', 'walker' => new BootstrapBasicMyWalkerNavMenu())); ?>
+					<!-- cd-main-nav -->
+
+					<?php
+					if ( is_user_logged_in() ) {
+						echo '<ul id="menu-account" class="mycweb-main-nav list-inline pull-right"><li><a class="btn btn-yellow btn-bordered pull-right btn-sm" href="', wp_logout_url(), '" title="Logout">Logout</a></li></ul>';
+					} else {
+						wp_nav_menu(array('theme_location' => 'accountMenu', 'container' => false, 'menu_class' => 'mycweb-main-nav list-inline pull-right', 'walker' => new BootstrapBasicMyWalkerNavMenu()));
+					}
+					?>
+				</nav>
+				<div class="clearfix"></div>
+			</div>
+		</header>
+		<?php full_above_content_area(); ?>
+		<?php
+	} else { ?>
+		<header class="mycweb-header">
+			<div class="container">
+				<?php if ( get_theme_mod( 'm1_logo' ) ) : ?>
+					<div class="mycweb-logo pull-left">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="site-logo" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+
+							<img src="<?php echo get_theme_mod( 'm1_logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+
+						</a>
+					</div>
+				<?php else : ?>
+
+					<h1 class="site-title-heading">
+						<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><?php bloginfo('name'); ?></a>
+					</h1>
+
+				<?php endif; ?>
+
+				<nav>
+					<?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'mycweb-main-nav list-inline pull-left', 'walker' => new BootstrapBasicMyWalkerNavMenu())); ?>
+					<!-- cd-main-nav -->
+
+					<?php
+					if ( is_user_logged_in() ) {
+						echo '<ul id="menu-account" class="mycweb-main-nav list-inline pull-right"><li><a class="btn btn-yellow btn-bordered pull-right btn-sm" href="', wp_logout_url(), '" title="Logout">Logout</a></li></ul>';
+					} else {
+						wp_nav_menu(array('theme_location' => 'accountMenu', 'container' => false, 'menu_class' => 'mycweb-main-nav list-inline pull-right', 'walker' => new BootstrapBasicMyWalkerNavMenu()));
+					}
+					?>
+				</nav>
+				<div class="clearfix"></div>
+			</div>
+		</header>
+	<?php } ?>
 
 			<div class="fluid-wrap">
 			<div id="content" class="row-with-vspace site-content">
