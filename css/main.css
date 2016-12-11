@@ -178,10 +178,16 @@ a img.aligncenter {
 }
 
 .mycweb-header {
+	width: 100%;
+	padding-top: 10px;
+	background: #202d42;
+}
+
+.mycweb-header.fixedNav {
 	position: absolute;
 	z-index: 999;
 	top: 0;
-	width: 100%;
+	background: transparent !important;
 }
 
 .mycweb-logo  {
@@ -276,19 +282,42 @@ h6 {
 }
 
 .hdr-rounded {
-	background: #3eb8cc;
-	color: ##fff;
+	background: #ffd204;
+	color: #08152a;
 	display: inline-block;
-	padding: 10px 0 0;
+	padding: 18px 0 0;
 	position: relative;
 	z-index: 1;
 	border-radius: 50%;
-	width: 52px;
-	height: 52px;
-	color: #fff;
+	width: 72px;
+	height: 72px;
 	margin: 0 0 30px;
 	border: solid 5px rgba(255, 255, 255, .4);
 	text-align: center;
+}
+
+.site-section__title {
+	overflow: hidden;
+	text-align: center;
+}
+.site-section__title::before {
+	right: 0.5em;
+	margin-left: -50%;
+}
+
+.site-section__title::before, .site-section__title::after {
+	content:"";
+	display: inline-block;
+	height: 0;
+	position: relative;
+	vertical-align: middle;
+	width: 50%;
+	border-top: 2px solid #3eb8cc;
+}
+
+.site-section__title::after {
+	left: 0.5em;
+	margin-right: -50%;
 }
 
 .title-medium {
@@ -855,7 +884,7 @@ Button
 .btn-yellow.btn-bordered.focus,
 .btn-group.open .btn-yellow:focus,
 .btn-yellow.btn-bordered:hover{
-	color: #fff;
+	color: #08152a;
 	background-color: #e2ba3f;
 	border-color: #e2ba3f;
 }
@@ -2555,10 +2584,18 @@ Text Color
 
 @media (max-width: 768px) {
 	.hero-hdr {
-		line-height: 48px;
+		line-height: 28px;
 		font-weight: 800;
-		font-size: 48px;
+		font-size: 28px;
 	}
+}
+
+.borer-top {
+	border-top: solid 1px #eeeeee;
+}
+
+.borer-bottom {
+	border-bottom: solid 1px #eeeeee;
 }
 /*
 Full Width Sections
@@ -2635,6 +2672,18 @@ Full Width Sections
 	color: #fff !important;
 }
 
+.fullscreen-center {
+	display: -webkit-flexbox!important;
+	display: -ms-flexbox!important;
+	display: -webkit-flex!important;
+	display: flex!important;
+	-webkit-flex-align: center!important;
+	-ms-flex-align: center!important;
+	-webkit-align-items: center!important;
+	align-items: center!important;
+	justify-content: center!important;
+	height: 100%;
+}
 
 /*
 Plan Section

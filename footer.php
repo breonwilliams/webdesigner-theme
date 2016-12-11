@@ -22,7 +22,7 @@
 					</div>
 				</div>
 
-				<div id="footer-row" class="row site-footer footer-bottom">
+				<div id="footer-row" class="site-footer footer-bottom">
 					<div class="copyright">
 						<div class="container">
 							<div class="row">

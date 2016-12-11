@@ -80,7 +80,7 @@ add_action('after_setup_theme', 'bootstrapBasicSetup');
 // custom menu class
 
 function add_menuclass($ulclass) {
-	return preg_replace('/<a rel="button"/', '<a rel="button" class="btn btn-yellow btn-bordered"', $ulclass, 1);
+	return preg_replace('/<a rel="button"/', '<a rel="button" class="btn btn-yellow btn-bordered btn-sm"', $ulclass, 1);
 }
 add_filter('wp_nav_menu','add_menuclass');
 
