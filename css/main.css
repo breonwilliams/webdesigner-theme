@@ -210,12 +210,16 @@ a img.aligncenter {
 	font-family: 'Raleway', sans-serif;
 }
 
+.mycweb-main-nav-right {
+	margin-right: 50px;
+}
+
 .mycweb-main-nav a {
 	color: #FFFFFF;
 }
 
 @media (max-width: 768px) {
-	#menu-main {
+	.mycweb-main-nav {
 		display: none;
 	}
 }
@@ -872,7 +876,7 @@ Button
 }
 
 .btn-yellow {
-	color: #fff;
+	color: #08152a;
 	background: #ffd204;
 	border-color: #ffd204;
 }
