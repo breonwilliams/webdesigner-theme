@@ -375,3 +375,11 @@ a {
   -o-transform: translateX(0);
   transform: translateX(0);
 }
+
+/* Custom Ordered list */
+
+.orderedList dt {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+}
