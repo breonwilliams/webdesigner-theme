@@ -293,6 +293,64 @@ h6 {
 	font-weight: 400;
 }
 
+.custom-bullet {
+	margin: 0 0 0 15px;
+	padding: 0;
+}
+
+.custom-bullet li {
+	display: block;
+}
+
+.custom-bullet li:before
+{
+	/*Using a Bootstrap glyphicon as the bullet point*/
+	content: "\f00c";
+	font-family: 'FontAwesome';
+	font-size: 9px;
+	float: left;
+	margin-top: 0;
+	margin-left: -17px;
+	color: #CCCCCC;
+}
+
+.bullets-none
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+}
+
+.bullets-none li {
+	margin: 0 0 15px;
+}
+
+@media (min-width: 768px) {
+	.bullet-col-4 {
+		columns: 4;
+		-webkit-columns: 4;
+		-moz-columns: 4;
+	}
+}
+
+@media (max-width: 767px) {
+	.bullet-col-2 {
+		columns: 2;
+		-webkit-columns: 2;
+		-moz-columns: 2;
+	}
+}
+
+@media (max-width: 600px) {
+	.bullet-col-2 {
+		columns: 1;
+		-webkit-columns: 1;
+		-moz-columns: 1;
+	}
+}
+
 .hdr-rounded {
 	background: #ffd204;
 	color: #08152a;
