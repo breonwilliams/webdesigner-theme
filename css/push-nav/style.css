@@ -287,10 +287,10 @@ a {
   margin-top: 60px;
 }
 .cd-nav .cd-primary-nav li {
-  margin: 1.6em 0;
+  /*margin: 1.6em 0;*/
 }
 .cd-nav .cd-primary-nav a {
-  font-family: "Merriweather", serif;
+  font-family: 'Muli', sans-serif;
   font-size: 2.4rem;
   color: rgba(255, 255, 255, 0.3);
   display: inline-block;
@@ -305,7 +305,7 @@ a {
   /*margin-top: 80px;*/
 }
 .cd-nav .cd-contact-info li {
-  font-family: "Merriweather", serif;
+  font-family: 'Muli', sans-serif;
   margin-bottom: 1.5em;
   line-height: 1.2;
   color: rgba(255, 255, 255, 0.3);
@@ -340,7 +340,7 @@ a {
     margin-bottom: 5.6em;
   }
   .cd-nav .cd-primary-nav li {
-    margin: 2em 0;
+    /*margin: 2em 0;*/
   }
   .cd-nav .cd-primary-nav a {
     font-size: 4.4rem;

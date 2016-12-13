@@ -26,10 +26,9 @@ CSS structure
 ============================================================== */
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
-@import url(https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Muli');
 
 
 /*
@@ -37,7 +36,7 @@ Typography
 =========================== */
 body {
 	background:#fff;
-	font-family: 'Merriweather', serif;
+	font-family: 'Muli', sans-serif;
 	font-size:16px;
 	line-height:1.8;
 	color: #243040;
@@ -319,7 +318,6 @@ h6 {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	font-family: 'Open Sans', sans-serif;
 	font-size: 18px;
 }
 
@@ -447,6 +445,42 @@ input, select, textarea {
 	margin: 0;
 	outline: 0;
 	vertical-align: baseline;
+}
+
+/* Login Form */
+
+#loginform input[type="text"], #loginform input[type="password"], input[type="text"].password-reset {
+	display: block;
+	width: 100%;
+	border: 1px solid #D4D9E2;
+	border-radius: 3px;
+	height: 50px;
+	padding: 15px;
+	font-size: 14px;
+	color: #596377;
+	outline: 0;
+	-webkit-transition: border-color .2s ease;
+	transition: border-color .2s ease;
+}
+
+#loginform input[type="submit"] {
+	display: inline-block;
+	margin: 20px auto;
+	background: #ffd204;
+	border-radius: 100px;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 60px;
+	color: #202d42;
+	cursor: pointer;
+	-webkit-transition: box-shadow .2s ease,border .2s ease;
+	transition: box-shadow .2s ease,border .2s ease;
+	border: none;
+	font-weight: 600;
+}
+
+.wp-user-form {
+	width: 100%;
 }
 
 .header-top-area .bootstrap-select.btn-group:not(.input-group-btn),
