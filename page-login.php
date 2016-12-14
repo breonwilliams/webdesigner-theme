@@ -18,7 +18,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 	<main id="main" class="site-main flex-wrap" role="main">
 		<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
 
-		<section class="flex-item bg-img text-white" style="background-image: url('<?php echo $thumb['0'];?>')">
+		<section class="flex-item bg-img text-white fill-height" style="background-image: url('<?php echo $thumb['0'];?>')">
 			<div class="overlay-blue pad-40 height-100">
 				<div class="container">
 					<?php

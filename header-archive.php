@@ -80,7 +80,7 @@
 
                 <?php
                 if ( is_user_logged_in() ) {
-                    echo '<ul id="menu-account" class="mycweb-main-nav mycweb-main-nav-right list-inline pull-right"><li><a class="btn btn-yellow btn-bordered pull-right btn-sm" href="', wp_logout_url(), '" title="Logout">Logout</a></li></ul>';
+                    echo '<ul id="menu-account" class="mycweb-main-nav mycweb-main-nav-right list-inline pull-right logout-button"><li><a class="btn btn-yellow btn-bordered pull-right btn-sm" href="', wp_logout_url(), '" title="Logout">Logout</a></li></ul>';
                 } else {
                     wp_nav_menu(array('theme_location' => 'accountMenu', 'container' => false, 'menu_class' => 'mycweb-main-nav mycweb-main-nav-right list-inline pull-right', 'walker' => new BootstrapBasicMyWalkerNavMenu()));
                 }
