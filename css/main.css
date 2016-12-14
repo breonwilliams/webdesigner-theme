@@ -46,6 +46,10 @@ body {
 	-webkit-text-size-adjust: 100%;
 }
 
+.site-content {
+	background: #FFFFFF;
+}
+
 /* =WordPress Core
 -------------------------------------------------------------- */
 .alignnone {
@@ -86,6 +90,21 @@ a img.aligncenter {
 	display: block;
 	margin-left: auto;
 	margin-right: auto
+}
+
+.orderedList dt:before {
+	content: counter(my-badass-counter);
+	counter-increment: my-badass-counter;
+	position: absolute;
+	left: 0;
+	top: 0;
+	font: bold 22px/1 Sans-Serif;
+	background: #ffd204;
+	width: 45px;
+	height: 45px;
+	padding: 6px 11px 0;
+	border-radius: 50%;
+	border: solid 5px rgba(255,255,255,.6);
 }
 
 .wp-caption {
@@ -217,7 +236,7 @@ a img.aligncenter {
 	color: #FFFFFF;
 }
 
-.mycweb-main-nav a:hover {
+.mycweb-main-nav a:hover, .mycweb-main-nav .active a {
 	color: #ffd204;
 }
 
@@ -449,7 +468,11 @@ input, select, textarea {
 
 /* Login Form */
 
-#loginform input[type="text"], #loginform input[type="password"], input[type="text"].password-reset {
+#loginform input[type="text"],
+#loginform input[type="password"],
+input[type="text"].password-reset,
+input[type="text"].wpcf7-form-control,
+input[type="email"].wpcf7-form-control {
 	display: block;
 	width: 100%;
 	border: 1px solid #D4D9E2;
@@ -463,7 +486,21 @@ input, select, textarea {
 	transition: border-color .2s ease;
 }
 
-#loginform input[type="submit"] {
+textarea.wpcf7-form-control{
+	display: block;
+	width: 100%;
+	border: 1px solid #D4D9E2;
+	border-radius: 3px;
+	padding: 15px;
+	font-size: 14px;
+	color: #596377;
+	outline: 0;
+	-webkit-transition: border-color .2s ease;
+	transition: border-color .2s ease;
+}
+
+#loginform input[type="submit"],
+input[type="submit"].wpcf7-submit {
 	display: inline-block;
 	margin: 20px auto;
 	background: #ffd204;
@@ -477,6 +514,10 @@ input, select, textarea {
 	transition: box-shadow .2s ease,border .2s ease;
 	border: none;
 	font-weight: 600;
+}
+
+.wpcf7-form label {
+	width: 100%;
 }
 
 .wp-user-form {
@@ -2770,7 +2811,7 @@ Full Width Sections
 }
 
 .overlay-blue {
-	background: #5d7395;
+	background: rgba(93,115,149,.7);
 	color: #fff;
 }
 
@@ -2782,6 +2823,27 @@ Full Width Sections
 .overlay-yellow {
 	background: #ffd204;
 	color: #fff;
+}
+
+.flex-item .height-100 {
+	height: 100%;
+}
+
+@media (min-width: 769px) {
+	.flex-item .height-100 {
+		display: -webkit-flexbox!important;
+		display: -ms-flexbox!important;
+		display: -webkit-flex !important;
+		display: flex !important;
+		-webkit-flex-align: center !important;
+		-ms-flex-align: center !important;
+		-webkit-align-items: center !important;
+		align-items: center !important;
+		justify-content: center !important;
+		height: 100%;
+		position: absolute;
+		width: 100%;
+	}
 }
 
 .color-on-img {

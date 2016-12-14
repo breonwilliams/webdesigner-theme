@@ -16,26 +16,30 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 
 <div class="content-area" id="main-column">
 	<main id="main" class="site-main flex-wrap" role="main">
-		<section class="flex-item pad-40 overlay-blue text-white">
-			<div class="container">
-		<?php
-		while (have_posts()) {
-			the_post();
+		<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
 
-			get_template_part('content', 'notitle');
+		<section class="flex-item bg-img text-white" style="background-image: url('<?php echo $thumb['0'];?>')">
+			<div class="overlay-blue pad-40 height-100">
+				<div class="container">
+					<?php
+					while (have_posts()) {
+						the_post();
 
-			echo "\n\n";
+						get_template_part('content', 'notitle');
 
-			// If comments are open or we have at least one comment, load up the comment template
-			if (comments_open() || '0' != get_comments_number()) {
-				comments_template();
-			}
+						echo "\n\n";
 
-			echo "\n\n";
+						// If comments are open or we have at least one comment, load up the comment template
+						if (comments_open() || '0' != get_comments_number()) {
+							comments_template();
+						}
 
-		} //endwhile;
-		?>
-</div>
+						echo "\n\n";
+
+					} //endwhile;
+					?>
+				</div>
+			</div>
 			</section>
 <section class="flex-item pad-40">
 	<div class="container">
