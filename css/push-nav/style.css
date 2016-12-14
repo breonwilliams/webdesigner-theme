@@ -70,7 +70,7 @@ a {
   position: fixed;
   z-index: 3;
   right: 5%;
-  top: 18px;
+  top: 15px;
   height: 54px;
   width: 54px;
   background-color: #243040;
@@ -203,7 +203,7 @@ a {
 }
 @media only screen and (min-width: 1170px) {
   .cd-nav-trigger {
-    top: 18px;
+    top: 15px;
   }
 }
 
