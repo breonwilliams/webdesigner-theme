@@ -5,15 +5,13 @@
  * @package bootstrap-basic
  */
 
-get_header();
+get_header('single');
 
 /**
  * determine main column size from actived sidebar
  */
-$main_column_size = bootstrapBasicGetMainColumnSize();
-?> 
-<?php get_sidebar('left'); ?> 
-				<div class="col-md-<?php echo $main_column_size; ?> content-area" id="main-column">
+?>
+				<div class="col-md-8 col-md-offset-2 content-area" id="main-column">
 					<main id="main" class="site-main" role="main">
 						<?php 
 						while (have_posts()) {
@@ -38,5 +36,4 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 						?> 
 					</main>
 				</div>
-<?php get_sidebar('right'); ?> 
-<?php get_footer(); ?> 
+<?php get_footer(); ?>

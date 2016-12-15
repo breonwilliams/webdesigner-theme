@@ -1,11 +1,19 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('padbot-40'); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
 
-		<div class="entry-meta padbot-20">
-			<?php bootstrapBasicPostOn(); ?> 
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
+	<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+
+	if ( $thumb ) {
+
+	} else { ?>
+		<header class="entry-header">
+			<h1 class="entry-title"><?php the_title(); ?></h1>
+
+			<div class="entry-meta padbot-20">
+				<?php bootstrapBasicPostOn(); ?>
+			</div><!-- .entry-meta -->
+		</header>
+	<?php } ?>
+	<!-- .entry-header -->
 
 	<div class="entry-content padbot-20">
 		<?php the_content(); ?> 
