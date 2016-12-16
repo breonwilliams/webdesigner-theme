@@ -240,6 +240,12 @@ a img.aligncenter {
 	color: #ffd204;
 }
 
+@media (max-width: 992px) {
+	.mycweb-main-nav.pull-left {
+		display: none;
+	}
+}
+
 @media (max-width: 768px) {
 	.mycweb-main-nav {
 		display: none;
