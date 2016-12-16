@@ -11,12 +11,12 @@
 	
 	<?php if (is_search()) { // Only display Excerpts for Search ?> 
 	<div class="entry-summary">
-		<?php the_excerpt(); ?> 
+		<?php the_excerpt(); ?>
 		<div class="clearfix"></div>
 	</div><!-- .entry-summary -->
 	<?php } else { ?> 
 	<div class="entry-content padbot-20">
-		<?php the_content(bootstrapBasicMoreLinkText()); ?> 
+		<?php the_content(bootstrapBasicMoreLinkText()); ?>
 		<div class="clearfix"></div>
 		<?php 
 		/**
