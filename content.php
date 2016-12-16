@@ -1,12 +1,11 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class('padbot-40'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('padbot-40 marginbot-40'); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-
 		<?php if ('post' == get_post_type()) { ?> 
 		<div class="entry-meta padbot-20">
-			<?php bootstrapBasicPostOn(); ?> 
+			Posted on <?php echo get_the_date('D, F jS, Y'); ?>
 		</div><!-- .entry-meta -->
-		<?php } //endif; ?> 
+		<?php } //endif; ?>
+		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 	</header><!-- .entry-header -->
 
 	
@@ -59,12 +58,6 @@
 		</div><!--.entry-meta-category-tag-->
 		<?php } // End if 'post' == get_post_type() ?> 
 
-		<div class="entry-meta-comment-tools">
-			<?php if (! post_password_required() && (comments_open() || '0' != get_comments_number())) { ?> 
-			<span class="comments-link"><?php bootstrapBasicCommentsPopupLink(); ?></span>
-			<?php } //endif; ?> 
-
-			<?php bootstrapBasicEditPostLink(); ?> 
-		</div><!--.entry-meta-comment-tools-->
+		<!--.entry-meta-comment-tools-->
 	</footer><!-- .entry-meta -->
 </article><!-- #post-## -->

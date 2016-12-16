@@ -1409,6 +1409,13 @@ ul.post_tag li a:hover {
 	color: #3eb8cc;
 }
 
+article.post.type-post {
+	border-bottom: 1px solid #eeeeee;
+}
+
+article.post.type-post:last-child {
+	border-bottom: none;
+}
 /*
 Tables
 ================================== */
