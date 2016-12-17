@@ -56,7 +56,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 		}
 		if (is_user_logged_in()) { ?>
 
-			<h1 id="fittext3" class="text-blue">Hello <?php echo $user_identity; ?>!</h1>
+			<h1 id="fittext3" class="text-blue" style="line-height: normal;">Hello <?php echo $user_identity; ?>!</h1>
 
 		<?php } else {
 			wp_login_form($args);

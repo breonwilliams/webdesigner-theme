@@ -10,7 +10,7 @@ jQuery(document).ready(function($){
 
 // Popover on page load
 
-jQuery(document).ready(function($){
+jQuery(function($) {
     $("#pload-pop").popover('show');
     $("#pload-pop").on('click', function () {
         $('#pload-pop').popover('destroy');
