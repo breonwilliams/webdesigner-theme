@@ -18,8 +18,24 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 	<main id="main" class="site-main flex-wrap" role="main">
 
 		<?php global $user_ID, $user_identity; get_currentuserinfo(); if (!$user_ID) { ?>
+			<?php
+			while (have_posts()) {
+				the_post();
 
-			<p>Enter your username or email to reset your password.</p>
+				get_template_part('content', 'notitle');
+
+				echo "\n\n";
+
+				// If comments are open or we have at least one comment, load up the comment template
+				if (comments_open() || '0' != get_comments_number()) {
+					comments_template();
+				}
+
+				echo "\n\n";
+
+			} //endwhile;
+			?>
+
 			<form method="post" action="<?php echo site_url('wp-login.php?action=lostpassword', 'login_post') ?>" class="wp-user-form">
 					<div class="username">
 						<label for="user_login" class="hide"><?php _e('Username or Email'); ?>: </label>

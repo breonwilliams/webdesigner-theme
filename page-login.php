@@ -6,7 +6,7 @@
  * @package bootstrap-basic
  */
 
-get_header('fluid');
+get_header('login');
 
 /**
  * determine main column size from actived sidebar
@@ -54,9 +54,11 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 <strong>Oops!</strong> That email / password combination is not valid.</div>
 	            </div>'; }
 		}
-		if (is_user_logged_in()) {
-			echo '<a id="wp-submit" class="btn btn-primary btn-md" href="', wp_logout_url(), '" title="Logout">Logout</a>';
-		} else {
+		if (is_user_logged_in()) { ?>
+
+			<h1 id="fittext3" class="text-blue">Hello <?php echo $user_identity; ?>!</h1>
+
+		<?php } else {
 			wp_login_form($args);
 
 			$args = array(
