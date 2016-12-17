@@ -40,3 +40,13 @@ function verify_username_password( $user, $username, $password ) {
     }
 }
 add_filter( 'authenticate', 'verify_username_password', 1, 3);
+
+// hide admin bar from users
+
+add_action('after_setup_theme', 'remove_admin_bar');
+
+function remove_admin_bar() {
+    if (!current_user_can('administrator') && !is_admin()) {
+        show_admin_bar(false);
+    }
+}
