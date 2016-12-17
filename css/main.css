@@ -1415,11 +1415,11 @@ ul.post_tag li a:hover {
 	color: #3eb8cc;
 }
 
-article.post.type-post {
+article.post-border {
 	border-bottom: 1px solid #eeeeee;
 }
 
-article.post.type-post:last-child {
+article.post-border:last-child {
 	border-bottom: none;
 }
 /*
@@ -1434,11 +1434,16 @@ Tables
 	padding:5px !important;
 }
 .table-1 {
-	border-bottom:1px solid #000;
+	border-bottom:1px solid #243040;
+}
+
+.table-1 h3 a {
+	text-transform: capitalize;
+	color: #3eb8cc;
 }
 
 .table-1 th {
-	background-color: #000;
+	background-color: #243040;
 	color:#fff;
 	border-bottom:none;
 }
@@ -2706,6 +2711,11 @@ Pagination
 .pagination li:first-child.disabled a {
 	padding-left: 0 !important;
 }
+
+.dataTables_paginate .pagination li:first-child.disabled a {
+	padding-left: 10px !important;
+}
+
 .pagination li:first-child a {
 	border-bottom-left-radius: 0;
 	border-top-left-radius: 0;
