@@ -100,7 +100,10 @@
 					<div class="pad-100 height-100" style="background:rgba(32,45,66,.8);">
 						<div class="container">
 
-							<h1 id="fittext3" class="hero-hdr text-white" style="line-height: 180px; font-size: 102.4px;"><?php the_title(); ?></h1>
+							<h1 id="fittext3" class="hero-hdr text-white" style="line-height: normal;"><?php the_title(); ?></h1>
+							<div class="entry-meta padbot-20">
+								Posted on <?php echo get_the_date('D, F jS, Y'); ?>
+							</div>
 
 						</div>
 					</div>

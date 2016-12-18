@@ -488,7 +488,7 @@ input[type="email"].wpcf7-form-control {
 	border-radius: 3px;
 	height: 50px;
 	padding: 15px;
-	font-size: 14px;
+	font-size: 16px;
 	color: #596377;
 	outline: 0;
 	-webkit-transition: border-color .2s ease;
@@ -505,7 +505,7 @@ textarea.wpcf7-form-control{
 	border: 1px solid #D4D9E2;
 	border-radius: 3px;
 	padding: 15px;
-	font-size: 14px;
+	font-size: 16px;
 	color: #596377;
 	outline: 0;
 	-webkit-transition: border-color .2s ease;
