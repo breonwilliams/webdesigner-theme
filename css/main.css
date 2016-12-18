@@ -313,6 +313,10 @@ h6 {
 	letter-spacing: -0.2px;
 }
 
+#fittext1, #fittext2, #fittext3, #fittext4 {
+	line-height: normal;
+}
+
 .lead {
 	font-weight: 400;
 }
