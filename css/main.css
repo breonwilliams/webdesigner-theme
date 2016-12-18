@@ -495,6 +495,10 @@ input[type="email"].wpcf7-form-control {
 	transition: border-color .2s ease;
 }
 
+label[for="user_login"]{
+	width:100%;
+}
+
 textarea.wpcf7-form-control{
 	display: block;
 	width: 100%;
