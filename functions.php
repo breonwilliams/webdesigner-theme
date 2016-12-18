@@ -273,4 +273,4 @@ require get_template_directory() . '/inc/widgets/BootstrapBasicSearchWidget.php'
 require get_template_directory() . '/inc/template-widgets-hook.php';
 
 // login redirect
-require_once locate_template('/inc/redirect.php'); // Redirect to home page
+require_once locate_template('/inc/redirect.php'); // Hide admin bar
