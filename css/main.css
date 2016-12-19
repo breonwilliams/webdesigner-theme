@@ -481,6 +481,7 @@ input, select, textarea {
 input[type="text"],
 input[type="email"],
 input[type="password"],
+input[type="url"],
 #loginform input[type="text"],
 #loginform input[type="password"],
 input[type="text"].password-reset,
