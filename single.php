@@ -11,7 +11,7 @@ get_header('single');
  * determine main column size from actived sidebar
  */
 ?>
-				<div class="col-md-8 col-md-offset-2 content-area" id="main-column">
+				<div class="col-md-12 content-area" id="main-column">
 					<main id="main" class="site-main" role="main">
 						<?php 
 						while (have_posts()) {
