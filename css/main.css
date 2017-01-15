@@ -102,9 +102,10 @@ a img.aligncenter {
 	background: #ffd204;
 	width: 45px;
 	height: 45px;
-	padding: 6px 11px 0;
+	padding: 6px 0 0;
 	border-radius: 50%;
 	border: solid 5px rgba(255,255,255,.6);
+	text-align: center;
 }
 
 .wp-caption {
